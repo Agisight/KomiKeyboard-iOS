@@ -1,10 +1,4 @@
-//
-//  UniversalLogger.swift
-//  ibepo
-//
-//  Created by Steve Gigou on 18/09/2020.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 import Foundation
 import os.log
@@ -42,7 +36,7 @@ final class UpToDateLogger {
 
   private func getLogger(for category: String) -> Logger {
     if let logger = loggers[category] { return logger }
-    let logger = Logger(subsystem: "com.novesoft.ibepo", category: category)
+    let logger = Logger(subsystem: "com.majbyr.KomiKeyboard", category: category)
     loggers[category] = logger
     return logger
   }

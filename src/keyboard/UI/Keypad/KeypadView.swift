@@ -1,10 +1,4 @@
-//
-//  KeypadView.swift
-//  keyboard
-//
-//  Created by Steve Gigou on 2020-05-04.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 import UIKit
 
@@ -23,6 +17,7 @@ final class KeypadView: UIView {
   private var switchKeyView: SpecialKeyView?
   private var spaceKeyView: SpecialKeyView?
   private var returnKeyView: SpecialKeyView?
+  private var dotKeyView: SpecialKeyView?
   
   
   // MARK: Life cycle
@@ -141,12 +136,12 @@ final class KeypadView: UIView {
   
   private func loadRow3(_ keySet: KeySet, rowView2: UIView) -> UIView {
     let rowView3 = addRowView(topAnchor: rowView2.bottomAnchor)
-    shiftKeyView = addSpecial(in: rowView3, widthMultiplier: keyWidthMultiplier*1.5, leftAnchor: rowView3.leftAnchor)
+    shiftKeyView = addSpecial(in: rowView3, widthMultiplier: keyWidthMultiplier*1.4, leftAnchor: rowView3.leftAnchor)
     updateShiftState(.off)
     let lastKey = parse(keySet.rows[2], in: rowView3, leftAnchor: shiftKeyView!.rightAnchor)
-    deleteKeyView = addSpecial(in: rowView3, widthMultiplier: keyWidthMultiplier*1.5, leftAnchor: lastKey.rightAnchor)
+    deleteKeyView = addSpecial(in: rowView3, widthMultiplier: keyWidthMultiplier*1.4, leftAnchor: lastKey.rightAnchor)
     deleteKeyView!.rightAnchor.constraint(equalTo: rowView3.rightAnchor).isActive = true
-    deleteKeyView!.configure(withImage: SymbolsManager.getImage(named: "delete.left"), level: .secondary)
+    deleteKeyView!.configure(withImage: SymbolsManager.getImage(named: "delete.left"), level: .secondary) // völi .secondary
     return rowView3
   }
   
@@ -166,7 +161,10 @@ final class KeypadView: UIView {
       spaceLeftAnchor = altKeyView!.rightAnchor
     }
     spaceKeyView = addSpecial(in: rowView4, widthMultiplier: keyWidthMultiplier*5, leftAnchor: spaceLeftAnchor)
-    spaceKeyView!.configure(withText: "Espace", level: .primary)
+    spaceKeyView!.configure(withText: " ", level: .primary)
+    //dotKeyView = addSpecial(in: rowView4, widthMultiplier: keyWidthMultiplier*1, leftAnchor: spaceLeftAnchor)
+    //dotKeyView!.configure(withText: ".", level: .primary)
+
     returnKeyView = addSpecial(in: rowView4, widthMultiplier: keyWidthMultiplier*3, leftAnchor: spaceKeyView!.rightAnchor)
     returnKeyView!.rightAnchor.constraint(equalTo: rowView4.rightAnchor).isActive = true
     returnKeyView!.configure(withImage: SymbolsManager.getImage(named: "return"), level: .secondary)

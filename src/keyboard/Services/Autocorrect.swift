@@ -1,10 +1,4 @@
-//
-//  Autocorrect.swift
-//  ibepo
-//
-//  Created by Steve Gigou on 2020-05-19.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 import UIKit
 
@@ -36,10 +30,10 @@ final class Autocorrect {
     if input.count != 1 { return nil }
     let character = input.first!
     if character.isLetter || ["’", "'", "-"].contains(character) { return nil }
-    if let correction = correctionSet.preferredCorrection {
+    if correctionSet.preferredCorrection != nil {
       lastCorrectedWord = correctionSet.correction1?.word
-      let replacement = correction.word
-      return replacement
+   //   let replacement = correction.word
+   //   return replacement
     }
     return nil
   }
@@ -65,9 +59,9 @@ final class Autocorrect {
     }
     let wordToCorrect = lastCorrectedWord ?? currentWord
     let range = NSRange(location: 0, length: wordToCorrect.count)
-    let wordExists = checker.rangeOfMisspelledWord(in: wordToCorrect, range: range, startingAt: 0, wrap: false, language: "fr").length == 0
-    let guesses = checker.guesses(forWordRange: range, in: wordToCorrect, language: "fr") ?? []
-    let completions = checker.completions(forPartialWordRange: range, in: wordToCorrect, language: "fr") ?? []
+    let wordExists = checker.rangeOfMisspelledWord(in: wordToCorrect, range: range, startingAt: 0, wrap: false, language: "ru").length == 0
+    let guesses = checker.guesses(forWordRange: range, in: wordToCorrect, language: "ru") ?? []
+    let completions = checker.completions(forPartialWordRange: range, in: wordToCorrect, language: "ru") ?? []
     sortCorrections(enteredWord: wordToCorrect, guesses: guesses, completions: completions, enteredWordExists: wordExists)
     UniversalLogger.debug("Search ended ('\(currentWord)')")
   }

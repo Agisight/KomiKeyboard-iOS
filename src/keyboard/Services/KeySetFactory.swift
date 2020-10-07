@@ -1,10 +1,4 @@
-//
-//  KeySetFactory.swift
-//  ibepo
-//
-//  Created by Steve Gigou on 2020-05-04.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 final class KeySetFactory {
   
@@ -16,48 +10,52 @@ final class KeySetFactory {
     return KeySet(rows: rows)
   }
   
-  private func generateRow1() -> Row {
+private func generateRow1() -> Row {
     var row = Row()
-    row.append(generateKey(for: KeyCharacterSet("w", nil, nil, "#", nil, ["#","¶","¬"]), level: .secondary))
-    row.append(generateKey(for: KeyCharacterSet("b", nil, nil, "1", nil, ["1","¹"])))
-    row.append(generateKey(for: KeyCharacterSet("é", nil, nil, "2", nil, ["2","½","²"])))
-    row.append(generateKey(for: KeyCharacterSet("p", nil, ["p","π"], "3", nil, ["3","³"])))
-    row.append(generateKey(for: KeyCharacterSet("o", nil, ["º","o","ò","ó","ô","õ","ö"], "4", nil, ["4","¼","¾"])))
-    row.append(generateKey(for: KeyCharacterSet("è", nil, ["è","´","^","`","~"], "5", nil, nil), level: .secondary))
-    row.append(generateKey(for: KeyCharacterSet("v", nil, ["◊","v","√"], "6", nil, nil)))
-    row.append(generateKey(for: KeyCharacterSet("d", nil, ["d","ð"], "7", nil, nil)))
-    row.append(generateKey(for: KeyCharacterSet("l", nil, nil, "8", nil, nil)))
-    row.append(generateKey(for: KeyCharacterSet("j", nil, nil, "9", nil, nil)))
-    row.append(generateKey(for: KeyCharacterSet("z", nil, nil, "0", nil, nil), level: .secondary))
+    row.append(generateKey(for: KeyCharacterSet("й", nil, ["й","1"], "1", nil, ["1","¹"]))) //völi .level: .secondary
+    row.append(generateKey(for: KeyCharacterSet("ц", nil, ["ц","2"], "2", nil, ["2","½","²"])))
+    row.append(generateKey(for: KeyCharacterSet("у", nil, ["у","3"], "3", nil, ["3","³"])))
+    row.append(generateKey(for: KeyCharacterSet("к", nil, ["к","4"], "4", nil, ["4","¼","¾"])))
+    row.append(generateKey(for: KeyCharacterSet("е", nil, ["ё","е","5"], "5", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("н", nil, ["н","6"], "6", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("г", nil, ["г","7"], "7", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("ш", nil, ["щ","ш","8"], "8", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("щ", nil, ["ш","щ","9"], "9", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("з", nil, ["з","0"], "0", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("х", nil, ["«","х"], "«", nil, ["{","»","["])))
+    row.append(generateKey(for: KeyCharacterSet("і", nil, ["»","і"], "»", nil, ["}","]","»"])))
+
     return row
   }
   
   private func generateRow2() -> Row {
     var row = Row()
-    row.append(generateKey(for: KeyCharacterSet("ç", nil, nil, "@", nil, nil), level: .secondary))
-    row.append(generateKey(for: KeyCharacterSet("a", nil, ["ª","a","à","á","â","ã","ä","å"], "&", nil, ["","&","∞"])))
-    row.append(generateKey(for: KeyCharacterSet("u", nil, ["u","ù","ú","û","ü"], "œ", nil, ["œ","æ"])))
-    row.append(generateKey(for: KeyCharacterSet("i", nil, ["i","ì","í","î","ï"], "%", nil, ["°","%","‰"])))
-    row.append(generateKey(for: KeyCharacterSet("e", nil, ["e","è","é","ê","ë"], "€", nil, ["¤","€","$","¢","£","¥"])))
-    row.append(generateKey(for: KeyCharacterSet("c", nil, ["c","©"], "’", nil, ["'","\"","‘","’","“","”"]), level: .secondary))
-    row.append(generateKey(for: KeyCharacterSet("t", nil, ["t","þ","†","™"], "+", nil, ["+","±"])))
-    row.append(generateKey(for: KeyCharacterSet("s", nil, ["s","ß"], "-", nil, ["-","—","_"])))
-    row.append(generateKey(for: KeyCharacterSet("r", nil, ["r","®"], "/", nil, ["¦","|","÷","/","\\"])))
-    row.append(generateKey(for: KeyCharacterSet("n", nil, ["ñ","n"], "*", nil, ["·","*","×"])))
-    row.append(generateKey(for: KeyCharacterSet("m", nil, ["µ","m"], "=", nil, ["≈","≠","="]), level: .secondary))
+    row.append(generateKey(for: KeyCharacterSet("ф", nil, ["ф","#","№"], "#", nil, ["#","ф","№"]), level: .secondary))
+    row.append(generateKey(for: KeyCharacterSet("ы", nil, ["ы","/"], "/", nil, ["ы","ц"])))
+    row.append(generateKey(for: KeyCharacterSet("в", nil, ["в",":"], ":", nil, [":",";"])))
+    row.append(generateKey(for: KeyCharacterSet("а", nil, ["а",";"], ";", nil, ["°",";","%","‰"])))
+    row.append(generateKey(for: KeyCharacterSet("п", nil, ["п","№"], "№", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("р", nil, ["р","₽"], "₽", nil, ["₽","€","$","¢","£","¥"])))
+    row.append(generateKey(for: KeyCharacterSet("о", nil, ["о","+","ӧ"], "+", nil, ["+","±"])))
+    row.append(generateKey(for: KeyCharacterSet("л", nil, ["л","-"], "-", nil, ["-","—","_"])))
+    row.append(generateKey(for: KeyCharacterSet("д", nil, ["д","="], "=", nil, ["≈","≠","=","≥",">"])))
+    row.append(generateKey(for: KeyCharacterSet("ж", nil, ["ж","@"], "@", nil, ["×","@"])))
+    row.append(generateKey(for: KeyCharacterSet("э", nil, ["э","\""], "\"", nil, ["'","«","»","\""])))
+    row.append(generateKey(for: KeyCharacterSet("ӧ", nil, ["'","ӧ"], "'", nil, nil)))
     return row
   }
   
   private func generateRow3() -> Row {
     var row = Row()
-    row.append(generateKey(for: KeyCharacterSet("à", nil, ["à","ø"], "(", nil, ["(","[","{"])))
-    row.append(generateKey(for: KeyCharacterSet("y", nil, ["y","ý","ÿ"], ")", nil, [")","]","}"])))
-    row.append(generateKey(for: KeyCharacterSet("x", nil, nil, ",", nil, [",",";"])))
-    row.append(generateKey(for: KeyCharacterSet("k", nil, nil, "!", nil, ["!","¡"])))
-    row.append(generateKey(for: KeyCharacterSet("q", nil, nil, "?", nil, ["?","¿"])))
-    row.append(generateKey(for: KeyCharacterSet("g", nil, nil, ".", nil, ["…",".",":"])))
-    row.append(generateKey(for: KeyCharacterSet("h", nil, nil, "«", nil, ["≤","<","«"])))
-    row.append(generateKey(for: KeyCharacterSet("f", nil, nil, "»", nil, ["≥",">","»"])))
+    row.append(generateKey(for: KeyCharacterSet("я", nil, ["я","("], "(", nil, ["(","[","{"])))
+    row.append(generateKey(for: KeyCharacterSet("ч", nil, ["ч",")"], ")", nil, [")","]","}"])))
+    row.append(generateKey(for: KeyCharacterSet("с", nil, ["с",","], ",", nil, [",",";"])))
+    row.append(generateKey(for: KeyCharacterSet("м", nil, ["м","!"], "!", nil, ["!","¡"])))
+    row.append(generateKey(for: KeyCharacterSet("и", nil, ["і","и","?"], "?", nil, ["?","\""])))
+    row.append(generateKey(for: KeyCharacterSet("т", nil, ["т","."], ".", nil, ["…",".",":"])))
+    row.append(generateKey(for: KeyCharacterSet("ь", nil, ["ъ","ь",","], ",", nil, [",",".",";"])))
+    row.append(generateKey(for: KeyCharacterSet("б", nil, ["<","б"], "<", nil, ["<",">"])))
+    row.append(generateKey(for: KeyCharacterSet("ю", nil, [">","ю"], ">", nil, [">","<"])))
     return row
   }
   

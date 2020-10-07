@@ -1,10 +1,4 @@
-//
-//  Key.swift
-//  keyboard
-//
-//  Created by Steve Gigou on 2020-05-04.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 import UIKit
 
@@ -13,7 +7,7 @@ import UIKit
 struct Key {
   
   enum Kind {
-    case letter, shift, delete, alt, next, space, enter
+    case letter, shift, delete, alt, next, space, enter, dot
     
     var isModifier: Bool {
       return self == .shift || self == .alt || self == .next

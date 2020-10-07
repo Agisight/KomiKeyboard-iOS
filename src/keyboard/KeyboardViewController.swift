@@ -1,10 +1,4 @@
-//
-//  KeyboardViewController.swift
-//  keyboard
-//
-//  Created by Steve Gigou on 2020-05-02.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 import UIKit
 

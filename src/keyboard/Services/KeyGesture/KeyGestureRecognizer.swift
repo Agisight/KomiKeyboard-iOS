@@ -1,12 +1,6 @@
-//
-//  KeyGestureRecognizer.swift
-//  ibepo
-//
-//  Created by Steve Gigou on 2020-05-07.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
 
 import UIKit
+import AudioToolbox
 
 /// Represents a tap on the keyboard. It has two times more columns than the KeySet.
 typealias KeypadCoordinate = (row: Int, col: Int)
@@ -47,6 +41,7 @@ final class KeyGestureRecognizer: UIGestureRecognizer {
         customDelegate?.touchDown(at: coordinates, with: touch)
       }
     }
+    AudioServicesPlaySystemSound(1104)
   }
   
   override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
@@ -103,7 +98,7 @@ final class KeyGestureRecognizer: UIGestureRecognizer {
       return 0
     }
     let location = touch.location(in: view)
-    return findPosition(location: location.x, size: view.frame.width, chunkAmount: 22)
+    return findPosition(location: location.x, size: view.frame.width, chunkAmount: 24)
   }
   
   private func findPosition(location: CGFloat, size: CGFloat, chunkAmount: Int) -> Int {

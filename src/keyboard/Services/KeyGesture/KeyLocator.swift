@@ -1,10 +1,4 @@
-//
-//  KeyLocator.swift
-//  ibepo
-//
-//  Created by Steve Gigou on 2020-05-25.
-//  Copyright © 2020 Novesoft. All rights reserved.
-//
+
 
 final class KeyLocator {
   
@@ -16,7 +10,7 @@ final class KeyLocator {
       switch coordinate.col {
       case 0...2: // Shift
         return .shift
-      case 19...21: // Delete
+      case 21...24: // Delete
         return .delete
       default: // Letter keys
         return .letter
@@ -33,9 +27,9 @@ final class KeyLocator {
         } else {
           return .alt
         }
-      case 6...15:
+      case 6...17:
         return .space
-      case 16...22:
+      case 18...24:
         return .enter
       default:
         UniversalLogger.error("Unknown keypadCoordinate col: \(coordinate)")
