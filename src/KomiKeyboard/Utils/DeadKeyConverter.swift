@@ -1,4 +1,10 @@
-
+//
+//  DeadKeyConverter.swift
+//  ibepo
+//
+//  Created by Steve Gigou on 29/09/2020.
+//  Copyright © 2020 Novesoft. All rights reserved.
+//
 
 import Foundation
 

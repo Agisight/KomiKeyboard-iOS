@@ -1,4 +1,11 @@
-
+//
+//  LandingViewController.swift
+//  ibepo
+//
+//  Created by Steve Gigou on 25/09/2020.
+//  Copyright © 2020 Novesoft. All rights reserved.
+//  Copyright © 2020 majbyr.com. All rights reserved.
+//
 
 import UIKit
 

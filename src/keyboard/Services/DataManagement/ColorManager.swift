@@ -1,4 +1,10 @@
-
+//
+//  ColorManager.swift
+//  keyboard
+//
+//  Created by Steve Gigou on 2020-05-06.
+//  Copyright © 2020 Novesoft. All rights reserved.
+//
 
 import UIKit
 
