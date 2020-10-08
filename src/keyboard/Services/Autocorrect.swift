@@ -1,4 +1,11 @@
-
+//
+//  Autocorrect.swift
+//  ibepo
+//
+//  Created by Steve Gigou on 2020-05-19.
+//  Copyright © 2020 Novesoft. All rights reserved.
+//  Copyright © 2020 majbyr.com. All rights reserved.
+//
 
 import UIKit
 
