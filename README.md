@@ -4,5 +4,9 @@ The iOS keyboard layout for the Komi language. Fully functioning with Komi cyril
 
 <p align="center"><img src="images/Mocap.png"></p>
 
+## App Store
+
+I don't have an Apple Developer Account yet, so it would be great if someone could help by donating to buy an account. If you want to help please contact me on [VK](https://vk.com/AlexTheSun), [Telegram](https://t.me/majbyrcom) or [Facebook](https://www.facebook.com/AleksiAurinko).
+
 ## Source
 The code was adopted from the [iBepo](https://github.com/sgigou/ibepo) project that was made by [Steve Gigou](https://steve.gigou.fr)
