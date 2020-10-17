@@ -21,7 +21,7 @@
                                 <rect key="frame" x="16" y="382.5" width="382" height="131.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гижам комиӧн iOS'ын" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-co-LmJ">
-                                        <rect key="frame" x="113" y="81.5" width="156.5" height="18"/>
+                                        <rect key="frame" x="112.5" y="81.5" width="157" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

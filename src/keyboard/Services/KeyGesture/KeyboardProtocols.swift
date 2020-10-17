@@ -3,8 +3,7 @@
 //  keyboard
 //
 //  Created by Steve Gigou on 2020-05-14.
-//  Copyright © 2020 Novesoft. All rights reserved
-//  Copyright © 2020 majbyr.com. All rights reserved.
+//  Copyright © 2020 Novesoft. All rights reserved.
 //
 
 import UIKit

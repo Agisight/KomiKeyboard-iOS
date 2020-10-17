@@ -1,8 +1,10 @@
 //
-//  KeyLocator.swift
+//  KeySetFactory.swift
 //  ibepo
+//  Komikeyboard
 //
-//  Created by Steve Gigou on 2020-05-25.
+//  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
 //  Copyright © 2020 majbyr.com. All rights reserved.
 //
@@ -17,7 +19,7 @@ final class KeyLocator {
       switch coordinate.col {
       case 0...2: // Shift
         return .shift
-      case 21...24: // Delete
+      case 21...23: // Delete
         return .delete
       default: // Letter keys
         return .letter
@@ -26,7 +28,7 @@ final class KeyLocator {
       switch coordinate.col {
       case 0...5:
         if KeyboardSettings.shared.needsInputModeSwitchKey {
-          if coordinate.col <= 2 {
+          if coordinate.col < 3 {
             return .alt
           } else {
             return .next
@@ -34,9 +36,7 @@ final class KeyLocator {
         } else {
           return .alt
         }
-      case 6...17:
-        return .space
-      case 18...24:
+      case 18...23:
         return .enter
       default:
         UniversalLogger.error("Unknown keypadCoordinate col: \(coordinate)")

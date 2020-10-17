@@ -1,8 +1,10 @@
 //
 //  KeySetFactory.swift
 //  ibepo
+//  KomiKeyboard
 //
 //  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
 //  Copyright © 2020 majbyr.com. All rights reserved.
 //
@@ -17,9 +19,9 @@ final class KeySetFactory {
     return KeySet(rows: rows)
   }
   
-private func generateRow1() -> Row {
+  private func generateRow1() -> Row {
     var row = Row()
-    row.append(generateKey(for: KeyCharacterSet("й", nil, ["й","1"], "1", nil, ["1","¹"]))) //völi .level: .secondary
+    row.append(generateKey(for: KeyCharacterSet("й", nil, ["й","1"], "1", nil, ["1","¹"])))
     row.append(generateKey(for: KeyCharacterSet("ц", nil, ["ц","2"], "2", nil, ["2","½","²"])))
     row.append(generateKey(for: KeyCharacterSet("у", nil, ["у","3"], "3", nil, ["3","³"])))
     row.append(generateKey(for: KeyCharacterSet("к", nil, ["к","4"], "4", nil, ["4","¼","¾"])))
@@ -29,16 +31,15 @@ private func generateRow1() -> Row {
     row.append(generateKey(for: KeyCharacterSet("ш", nil, ["щ","ш","8"], "8", nil, nil)))
     row.append(generateKey(for: KeyCharacterSet("щ", nil, ["ш","щ","9"], "9", nil, nil)))
     row.append(generateKey(for: KeyCharacterSet("з", nil, ["з","0"], "0", nil, nil)))
-    row.append(generateKey(for: KeyCharacterSet("х", nil, ["«","х"], "«", nil, ["{","»","["])))
+    row.append(generateKey(for: KeyCharacterSet("х", nil, ["«","х"], "«", nil, ["{","[","«"])))
     row.append(generateKey(for: KeyCharacterSet("і", nil, ["»","і"], "»", nil, ["}","]","»"])))
-
     return row
   }
   
   private func generateRow2() -> Row {
     var row = Row()
-    row.append(generateKey(for: KeyCharacterSet("ф", nil, ["ф","#","№"], "#", nil, ["#","ф","№"]), level: .secondary))
-    row.append(generateKey(for: KeyCharacterSet("ы", nil, ["ы","/"], "/", nil, ["ы","ц"])))
+    row.append(generateKey(for: KeyCharacterSet("ф", nil, ["ф","#","№"], "#", nil, ["#","№","©","™","®"])))
+    row.append(generateKey(for: KeyCharacterSet("ы", nil, ["ы","/"], "/", nil, ["/","ы"])))
     row.append(generateKey(for: KeyCharacterSet("в", nil, ["в",":"], ":", nil, [":",";"])))
     row.append(generateKey(for: KeyCharacterSet("а", nil, ["а",";"], ";", nil, ["°",";","%","‰"])))
     row.append(generateKey(for: KeyCharacterSet("п", nil, ["п","№"], "№", nil, nil)))
@@ -46,9 +47,9 @@ private func generateRow1() -> Row {
     row.append(generateKey(for: KeyCharacterSet("о", nil, ["о","+","ӧ"], "+", nil, ["+","±"])))
     row.append(generateKey(for: KeyCharacterSet("л", nil, ["л","-"], "-", nil, ["-","—","_"])))
     row.append(generateKey(for: KeyCharacterSet("д", nil, ["д","="], "=", nil, ["≈","≠","=","≥",">"])))
-    row.append(generateKey(for: KeyCharacterSet("ж", nil, ["ж","@"], "@", nil, ["×","@"])))
-    row.append(generateKey(for: KeyCharacterSet("э", nil, ["э","\""], "\"", nil, ["'","«","»","\""])))
-    row.append(generateKey(for: KeyCharacterSet("ӧ", nil, ["'","ӧ"], "'", nil, nil)))
+    row.append(generateKey(for: KeyCharacterSet("ж", nil, ["ж","@"], "@", nil, ["©","™","®","@"])))
+    row.append(generateKey(for: KeyCharacterSet("э", nil, ["*","э"], "*", nil, ["·","×","*"])))
+    row.append(generateKey(for: KeyCharacterSet("ӧ", nil, ["\"","'","ӧ"], "\"", nil, ["'","«","»","\""])))
     return row
   }
   

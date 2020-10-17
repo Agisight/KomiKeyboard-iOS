@@ -4,7 +4,6 @@
 //
 //  Created by Steve Gigou on 2020-04-30.
 //  Copyright © 2020 Novesoft. All rights reserved.
-//  Copyright © 2020 majbyr.com. All rights reserved.
 //
 
 import XCTest

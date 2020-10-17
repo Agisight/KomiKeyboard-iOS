@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Гижам комиӧн-->
+        <!--majbyr.com-->
         <scene sceneID="zqc-ME-J39">
             <objects>
-                <tableViewController id="pjm-CV-rZ2" customClass="LandingViewController" customModule="Коми_клавиатура" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="pjm-CV-rZ2" customClass="LandingViewController" customModule="iBépo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="t8p-zm-Q4q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                             <outlet property="delegate" destination="pjm-CV-rZ2" id="Qhg-55-Qfw"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Гижам комиӧн" id="PkO-ni-nPU"/>
+                    <navigationItem key="navigationItem" title="majbyr.com" id="PkO-ni-nPU"/>
                     <connections>
                         <segue destination="qo1-3H-aNc" kind="show" identifier="install" id="VcE-ne-5Pd"/>
                         <segue destination="hwL-SM-hYi" kind="show" identifier="editor" id="pKt-QQ-dZH"/>
@@ -54,13 +54,13 @@
         <!--Сувтӧдӧм-->
         <scene sceneID="LEk-Ru-sEP">
             <objects>
-                <viewController id="qo1-3H-aNc" customClass="InstallViewController" customModule="Коми_клавиатура" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qo1-3H-aNc" customClass="InstallViewController" customModule="iBépo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YqH-j2-MVw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gvi-ZW-JZd">
-                                <rect key="frame" x="16" y="44" width="288" height="372"/>
+                                <rect key="frame" x="16" y="44" width="288" height="394"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кыдзи сувтӧдны" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bF-iV-exB">
                                         <rect key="frame" x="0.0" y="32" width="288" height="41"/>
@@ -68,40 +68,40 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Бӧрйы ладмӧдӧмъясад «Коми»" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-Yt-mKY">
-                                        <rect key="frame" x="0.0" y="105" width="288" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Бӧрйы ладмӧдӧмъясад «Коми кыв»" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLd-Yt-mKY">
+                                        <rect key="frame" x="0.0" y="105" width="288" height="42.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe" translatesAutoresizingMaskIntoConstraints="NO" id="52L-Cw-5pT">
-                                        <rect key="frame" x="0.0" y="348" width="288" height="24"/>
+                                        <rect key="frame" x="0.0" y="370" width="288" height="24"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="PfZ-Dw-I8x"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Гижигад личкы глобус серпас вылас" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1u-to-Pxt">
-                                        <rect key="frame" x="0.0" y="314" width="288" height="18"/>
+                                        <rect key="frame" x="0.0" y="336" width="288" height="18"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Кыв вежӧм" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPD-8j-YZl">
-                                        <rect key="frame" x="0.0" y="277.5" width="288" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="299.5" width="288" height="20.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeJ-JU-AkR">
-                                        <rect key="frame" x="0.0" y="215.5" width="288" height="30"/>
+                                        <rect key="frame" x="0.0" y="237.5" width="288" height="30"/>
                                         <state key="normal" title="Вуджны ладмӧдӧмъясӧ"/>
                                         <connections>
                                             <action selector="onSettingsTap" destination="qo1-3H-aNc" eventType="touchUpInside" id="9If-Tn-D3H"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Колӧ вуджны Настройки &gt; Основные &gt; Клавиатура &gt; Клавиатуры &gt; Новые клавиатуры…" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-73-yIN">
-                                        <rect key="frame" x="0.0" y="141.5" width="288" height="58"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="288" height="58"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -151,7 +151,7 @@
         <!--Видлалӧм-->
         <scene sceneID="yBH-kV-OLs">
             <objects>
-                <viewController id="hwL-SM-hYi" customClass="EditorViewController" customModule="Коми_клавиатура" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hwL-SM-hYi" customClass="EditorViewController" customModule="iBépo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="qZx-uw-xA0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

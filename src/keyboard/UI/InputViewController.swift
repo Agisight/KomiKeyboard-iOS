@@ -1,9 +1,12 @@
 //
-//  InputViewController.swift
+//  KeySetFactory.swift
 //  ibepo
+//  KomiKeyboard
 //
-//  Created by Steve Gigou on 2020-05-02.
+//  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
+//  Copyright © 2020 majbyr.com. All rights reserved.
 //
 
 import UIKit
@@ -130,13 +133,16 @@ final class InputViewController: UIViewController {
 extension InputViewController: KeyboardActionProtocol {
   
   func insert(text: String) {
-    if let replacement = autocorrectViewController.autocorrectEngine.correction(for: text) {
+    
+    // TODO: Enable with when Komi dictionary will be added
+    
+    /* if let replacement = autocorrectViewController.autocorrectEngine.correction(for: text) {
       replace(charactersAmount: KeyboardSettings.shared.textDocumentProxyAnalyzer.currentWord.count, by: replacement, separator: text)
-    } else {
+    } else { */
       delegate?.insert(text: text)
       autocorrectViewController.autocorrectEngine.update()
       textModifiers.modify()
-    }
+  //  }
   }
   
   func replace(charactersAmount: Int, by text: String, separator: String) {

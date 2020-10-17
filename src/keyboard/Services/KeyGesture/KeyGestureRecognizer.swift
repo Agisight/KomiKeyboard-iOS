@@ -1,8 +1,10 @@
 //
-//  KeyGestureRecognizer.swift
+//  KeySetFactory.swift
 //  ibepo
+//  KomiKeyboard
 //
-//  Created by Steve Gigou on 2020-05-07.
+//  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
 //  Copyright © 2020 majbyr.com. All rights reserved.
 //

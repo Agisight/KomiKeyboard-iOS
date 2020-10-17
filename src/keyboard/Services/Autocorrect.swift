@@ -1,8 +1,10 @@
 //
-//  Autocorrect.swift
+//  KeySetFactory.swift
 //  ibepo
+//  KomiKeyboard
 //
-//  Created by Steve Gigou on 2020-05-19.
+//  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
 //  Copyright © 2020 majbyr.com. All rights reserved.
 //
@@ -30,20 +32,22 @@ final class Autocorrect {
   private var lastCorrectedWord: String?
   
   // MARK: User input
-  
-  func correction(for input: String) -> String? {
+ 
+//  TODO: Enable when Komi dictionary will be added
+    
+/*  func correction(for input: String) -> String? {
     lastCorrectedWord = nil
     if !KeyboardSettings.shared.shouldAutocorrect { return nil }
     if input.count != 1 { return nil }
     let character = input.first!
     if character.isLetter || ["’", "'", "-"].contains(character) { return nil }
-    if correctionSet.preferredCorrection != nil {
+    if let correction = correctionSet.preferredCorrection {
       lastCorrectedWord = correctionSet.correction1?.word
-   //   let replacement = correction.word
-   //   return replacement
+      let replacement = correction.word
+      return replacement
     }
     return nil
-  }
+  } */
   
   func update() {
     launchSearch()

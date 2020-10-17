@@ -1,6 +1,7 @@
 //
 //  InstallViewController.swift
 //  ibepo
+//  Komikeyboard
 //
 //  Created by Steve Gigou on 25/09/2020.
 //  Copyright © 2020 Novesoft. All rights reserved.

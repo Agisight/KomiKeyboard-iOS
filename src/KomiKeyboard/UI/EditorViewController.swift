@@ -1,8 +1,10 @@
 //
-//  EditorViewController.swift
+//  KeySetFactory.swift
 //  ibepo
+//  Komikeyboard
 //
-//  Created by Steve Gigou on 25/09/2020.
+//  Created by Steve Gigou on 2020-05-04.
+//  Edited by Aleksei Ivanov on 2020-10-17
 //  Copyright © 2020 Novesoft. All rights reserved.
 //  Copyright © 2020 majbyr.com. All rights reserved.
 //
@@ -89,16 +91,16 @@ class EditorViewController: UIViewController {
 
   @IBAction func displayHelp(_ sender: Any) {
     let alert = UIAlertController(title: "Тані позьӧ видлыны гижны", message: "Улысса личканъяснас позьӧ кокнида татшӧмтыны (копируйтны) да пыртны (вставитны) гижӧдсӧ.", preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Но", style: .default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Fermer", style: .default, handler: nil))
     present(alert, animated: true)
   }
 
   @objc func deleteText(_ sender: UIBarButtonItem) {
     if !textView.text.isEmpty {
-      let alert = UIAlertController(title: "Чышкыны гижӧмсӧ", message: "Збыль-ӧ косъян чышкыны ставнас гижӧмсӧ?", preferredStyle: .actionSheet)
-      alert.addAction(UIAlertAction(title: "Ог", style: .default, handler: nil))
-      alert.addAction(UIAlertAction(title: "Чышкы", style: .destructive, handler: {
-        [weak self] _ in
+        let alert = UIAlertController(title: "Чышкыны гижӧмсӧ", message: "Збыль-ӧ косъян чышкыны ставнас гижӧмсӧ?", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Ог", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Чышкы", style: .destructive, handler: {
+          [weak self] _ in
         self?.textView.text = ""
       }))
       if let popoverController = alert.popoverPresentationController {
@@ -112,9 +114,9 @@ class EditorViewController: UIViewController {
     if textView.text.isEmpty {
       textView.text = UIPasteboard.general.string
     } else {
-      let alert = UIAlertController(title: "Пыртны гижӧм", message: "Збыль-ӧ кӧсъян вежны ставнас гижӧдсӧ пытран гижӧдӧн", preferredStyle: .actionSheet)
-      alert.addAction(UIAlertAction(title: "Ог", style: .default, handler: nil))
-      alert.addAction(UIAlertAction(title: "Пырт", style: .destructive, handler: {
+        let alert = UIAlertController(title: "Пыртны гижӧм", message: "Збыль-ӧ кӧсъян вежны ставнас гижӧдсӧ пытран гижӧдӧн", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Ог", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Пырт", style: .destructive, handler: {
         [weak self] _ in
         self?.textView.text = UIPasteboard.general.string
       }))
@@ -140,7 +142,7 @@ class EditorViewController: UIViewController {
       guard let key = presses.first?.key else {
         return super.pressesBegan(presses, with: event)
       }
-      guard var character = KomiKeyboardKeymap.getEquivalentChar(for: key) else {
+      guard var character = BepoKeymap.getEquivalentChar(for: key) else {
         return super.pressesBegan(presses, with: event)
       }
       if character.isEmpty { return }

@@ -4,7 +4,6 @@
 //
 //  Created by Steve Gigou on 2020-05-04.
 //  Copyright © 2020 Novesoft. All rights reserved.
-//  Copyright © 2020 majbyr.com. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +13,7 @@ import UIKit
 struct Key {
   
   enum Kind {
-    case letter, shift, delete, alt, next, space, enter, dot
+    case letter, shift, delete, alt, next, space, enter
     
     var isModifier: Bool {
       return self == .shift || self == .alt || self == .next

@@ -1,16 +1,16 @@
 //
 //  BepoKeymap.swift
 //  ibepo
+//  KomiKeyboard
 //
 //  Created by Steve Gigou on 28/09/2020.
 //  Copyright © 2020 Novesoft. All rights reserved.
-//  Copyright © 2020 majbyr.com. All rights reserved.
 //
 
 import UIKit
 
 @available(iOS 13.4, *)
-struct KomiKeyboardKeymap {
+struct BepoKeymap {
 
   struct KeyValue {
     let standard: String
