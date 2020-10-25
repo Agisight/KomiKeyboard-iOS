@@ -15,7 +15,7 @@ final class Constants {
   
   static let keySlotMultiplier: CGFloat = 1.0 / 12.0
   static let keyVerticalPadding: CGFloat = 5.0
-  static let keyHorizontalPadding: CGFloat = 1.5
+  static let keyHorizontalPadding: CGFloat = 3.0
   static let keyShadowOffset: CGFloat = 1.0
   static let keyCornerRadius: CGFloat = 5.0
   

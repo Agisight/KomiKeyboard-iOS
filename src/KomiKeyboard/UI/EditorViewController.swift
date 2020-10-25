@@ -91,7 +91,7 @@ class EditorViewController: UIViewController {
 
   @IBAction func displayHelp(_ sender: Any) {
     let alert = UIAlertController(title: "Тані позьӧ видлыны гижны", message: "Улысса личканъяснас позьӧ кокнида татшӧмтыны (копируйтны) да пыртны (вставитны) гижӧдсӧ.", preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Но", style: .default, handler: nil))
+    alert.addAction(UIAlertAction(title: "Fermer", style: .default, handler: nil))
     present(alert, animated: true)
   }
 
